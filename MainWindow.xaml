@@ -1,0 +1,28 @@
+﻿<Window x:Class="NetStockValueConvAssignment16Aug.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetStockValueConvAssignment16Aug"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+
+    </Window.Resources>
+    <Grid >
+
+
+        <DataGrid Name="myProduct" ItemsSource="{Binding}" AutoGenerateColumns="False" Loaded="myProduct_Loaded" Width="700" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,20,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ProductId" Binding="{Binding ProductID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ProductName" Binding="{Binding ProductName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="UnitPrice" Binding="{Binding UnitPrice}"></DataGridTextColumn>
+                <DataGridTextColumn Header="UnitsInStock" Binding="{Binding UnitsInStock}"></DataGridTextColumn>
+               
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+    </Grid>
+</Window>
